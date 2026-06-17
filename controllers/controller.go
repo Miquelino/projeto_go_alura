@@ -43,7 +43,7 @@ func BuscarAlunoPorID(c *gin.Context) {
 	database.DB.First(&aluno, id)
 	if aluno.ID == 0 {
 		c.JSON(http.StatusNotFound, gin.H{
-			"Not Found": "Aluno não encontrado"})
+			"Not Found": "Aluno nao encontrado"})
 		return
 	}
 	c.JSON(http.StatusOK, aluno)
@@ -81,7 +81,7 @@ func BuscaAlunoPorCPF(c *gin.Context) {
 
 	if aluno.ID == 0 {
 		c.JSON(http.StatusNotFound, gin.H{
-			"Not Found": "Aluno não encontrado"})
+			"Not Found": "Aluno nao encontrado"})
 		return
 	}
 	c.JSON(http.StatusOK, aluno)

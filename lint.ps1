@@ -1,0 +1,1 @@
+docker run --rm -it -v "${PWD}:/app" -w /app golangci/golangci-lint golangci-lint run controllers/ database/ models/ routes/
